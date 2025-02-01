@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+@theme {
+  --font-poppins: Poppins, sans-serif;
+  --font-gotu: Gotu, sans-serif;
+  --font-faculty-glyphic: Faculty Glyphic, sans-serif;
+  --color-base: #675E50;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/Poppins-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../fonts/Poppins-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Faculty Glyphic";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/FacultyGlyphic-Regular.ttf") format("truetype");
+  }
+
+@font-face {
+  font-family: "Gotu";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Gotu-Regular.ttf") format("truetype");
+}
+
+@layer components {
+  h2 {
+    font-family: var(--font-gotu);
+  }
+}
+
+.header-pattern {
+    content: url("../img/stained_glass_pattern.svg");
+    width: 100%;
+}
