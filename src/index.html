@@ -7,35 +7,97 @@
     <title>Andressa M. Fernandes</title>
 </head>
 <body class="bg-[#FFF7ED] text-[#675E50] font-poppins">
-    <div class="relative w-full">
+    <div class="relative w-full overflow-hidden">
         <!-- header -->
-        <header>
-            <div class="bg-[#F8E5C8]">
-                <div class="header-pattern"></div>
-                <div class="flex flex-col items-center sm:pr-14 sm:pl-14">
-                    <nav class="pb-14 pt-14 font-gotu text-sm sm:text-base md:text-lg xl:text-xl uppercase w-full">
-                        <ul class="flex flex-row flex-wrap justify-center gap-x-16 w-full">
-                            <li><a href="#about-me">About me</a></li>
-                            <li><a href="#about-me">Experience</a></li>
-                            <li><a href="#about-me">Skills</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="flex flex-wrap gap-10 justify-center items-center">
-                        <div class="w-auto z-10 ">
-                            <h1 class="font-faculty-glyphic text-[#A65F5F] text-center text-5xl">
-                                Hello,<br>I'm Andressa
-                            </h1>
-                            <h3>Software Developer based in Germany</h3>
+        <header class="min-h-screen w-full relative h-full flex flex-col">
+                <div class="flex grow-[0.9] h-full flex-col bg-[#FAEAD3] gap-10 sm:gap-12 pb-16 pt-16 pr-14 pl-14 sm:pb-0 md:pr-20 md:pl-20">
+                    <div class="flex justify-between items-center font-gotu text-black">
+                        <div class="flex items-center gap-x-8 ">
+                            <span class="w-[32px] h-auto motif"></span>
+                            <p class="text-sm md:text-base lg:text-lg mt-[5px]">Andressa M. Fernandes</p>
                         </div>
-
-                        <img src="img/profile_pic.jpeg" alt="Profile picture" class="h-32 w-32 sm:w-44 sm:h-44 md:w-50 md:h-50 xl:w-64 xl:h-64 rounded-full object-cover"/>
+                        <nav>
+                            <ul class="flex gap-x-8 w-full items-center main-menu mt-[6px] uppercase text-sm lg:text-base">
+                                <li><a href="#about-me">About me</a></li>
+                                <li><a href="#experience">Experience</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li class="leading-0"><a href=""><span class="github-icon w-5"></span></a></li>
+                                <li class="leading-0"><a href=""><span class="linkedin-icon w-5"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                
+                    <div class="flex h-full grow items-center justify-center">
+                        <div class="flex flex-wrap-reverse gap-10 self-center justify-center items-center">
+                            <div class="w-auto z-10 opacity-0 translate-y-5 fade-in text-center">
+                                <h1 class="font-faculty-glyphic text-[#A65F5F] text-center text-5xl">
+                                    Hello,<br>I'm Andressa
+                                </h1>
+                                <h3>Software Developer based in Germany</h3>
+                            </div>
+    
+                            <img src="img/profile_pic.jpeg" alt="Profile picture" class="h-44 w-44 md:w-52 md:h-52 xl:w-64 xl:h-64 rounded-full object-cover appear"/>
+                        </div>
                     </div>
                 </div>
+            <div class="relative h-full">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 183">
+                    <path d="M0 121C0 121 471.735 -18 833.867 121C1196 260 1560 121 1560 121V0H0V121Z" fill-opacity="1" fill="#F8E5C8"/>
+                </svg> -->
+                <svg viewBox="0 0 1440 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-60 121C-60 121 411.735 -18 773.867 121C1136 260 1500 121 1500 121V0H-60V121Z" fill-opacity="1" fill="#FAEAD3"/>
+                    <path d="M0 172C0 172 303.738 40.0287 761.351 111.283C1218.96 182.538 1440 32 1440 32" stroke="#B9AA93" stroke-width="3" stroke-dasharray="4 15"/>
+                    </svg>
+                <div class="flowers w-24 md:w-40 lg:w-44 h-auto absolute top-0 object-contain z-10"></div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path d="M0 121C0 121 471.735 -18 833.867 121C1196 260 1560 121 1560 121V0H0V121Z" fill-opacity="1" fill="#F8E5C8"/>
-              </svg>
         </header>
+
+        <!-- content -->
+        <main class="mt-screen relative w-full">
+            <!-- About me -->
+            <div class="flex flex-col items-start md:items-center md:flex-row gap-6 mt-10 pr-14 pl-14 md:pr-20 md:pl-20">
+                <div class="flex flex-col grow md:w-[60%] gap-6">
+                    <h2>HI!</h2>
+                    <p>I am a software developer with experience working in both the German and Brazilian markets, bringing an international perspective and adaptability to diverse work environments. I specialize in backend development using Kotlin, Spring Boot, and Java, with strong technical skills in RESTful APIs, database operations, and API documentation. Additionally, I have foundational experience in front-end tools such as Vue.js and TypeScript, as well as a solid understanding of Agile/Scrum practices. My background reflects a commitment to delivering high-quality, maintainable solutions and collaborating effectively within cross-cultural teams.</p>
+                </div>
+                <div class="flex grow justify-end w-auto">
+                        <div class="flex flex-col text-center items-center gap-8">
+                            <h2 class="section-title flex items-center gap-4">
+                                <span class="qaanoar-sun-icon w-[42px]"></span>
+                                I SPEAK
+                            </h2>
+                            <div class="flex text-center gap-14">
+                                <p class="flex flex-col">
+                                    <strong>Portuguese</strong>
+                                    Native Speaker
+                                </p>
+                                <p class="flex flex-col">
+                                    <strong>English</strong>
+                                    Fluent
+                                </p>
+                                <p class="flex flex-col">
+                                    <strong>German</strong>
+                                    Intermediate
+                                </p>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+    
+            <!-- Experience Section -->
+            <div class="bg-[#F9F1E6] relative mt-10 border-t-4 border-[#B9AA93] rounded-t-[155px] border-dotted p-14 md:pr-20 md:pl-20">
+                <h2 class="section-title flex items-center gap-4">
+                    <span class="qaanoar-leaves-icon w-[42px]"></span>
+                    EXPERIENCE
+                </h2>
+            </div>
+        </main>
+    </div>
+    
+    <footer class="">
+
+    </footer>
 </body>
 </html>

@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --font-poppins: Poppins, sans-serif;
-  --font-gotu: Gotu, sans-serif;
-  --font-faculty-glyphic: Faculty Glyphic, sans-serif;
-  --color-base: #675E50;
-}
-
 @font-face {
   font-family: "Poppins";
   font-weight: 400;
@@ -49,13 +42,80 @@
   src: url("../fonts/Gotu-Regular.ttf") format("truetype");
 }
 
+@theme {
+  --font-poppins: Poppins, sans-serif;
+  --font-gotu: Gotu, sans-serif;
+  --font-faculty-glyphic: Faculty Glyphic, sans-serif;
+}
+
 @layer components {
   h2 {
     font-family: var(--font-gotu);
+    font-size: var(--text-2xl);
+    color: var(--color-black);
+  }
+  p {
+    line-height: 1.8;
+    font-size: var(--text-sm);
   }
 }
 
-.header-pattern {
-    content: url("../img/stained_glass_pattern.svg");
-    width: 100%;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.5s ease-out forwards;
+}
+
+.appear {
+  animation: appear 1s ease-in;
+}
+
+.flowers {
+    content: url("../img/flowers.svg");
+}
+
+.motif {
+    content: url("../img/motif.svg");
+}
+
+.github-icon {
+    content: url("../img/linkedin_icon.svg");
+}
+
+.linkedin-icon {
+    content: url("../img/github_icon.svg");
+}
+
+.qaanoar-sun-icon {
+  content: url("../img/qaanoar_sun.svg");
+}
+
+.qaanoar-leaves-icon {
+  content: url("../img/qaanoar_leaves.svg");
+}
+
+.qaanoar-sparkles-icon {
+  content: url("../img/qaanoar_sparkles.svg");
+}
+
+.main-menu li {
+  line-height: calc(100% + 2px);
 }
