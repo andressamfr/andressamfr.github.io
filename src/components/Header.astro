@@ -1,0 +1,18 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Welcome from '../components/Welcome.astro';
+---
+
+<header class="min-h-screen w-full relative h-full flex flex-col">
+    <div class="flex grow-[0.9] h-full flex-col bg-[#FAEAD3] gap-10 sm:gap-12 pb-16 pt-16 pr-14 pl-14 sm:pb-0 md:pr-20 md:pl-20">
+        <Navbar></Navbar>
+        <Welcome></Welcome>
+    </div>
+    <div class="relative h-full">
+        <svg viewBox="0 0 1440 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-60 121C-60 121 411.735 -18 773.867 121C1136 260 1500 121 1500 121V0H-60V121Z" fill-opacity="1" fill="#FAEAD3"/>
+            <path d="M0 172C0 172 303.738 40.0287 761.351 111.283C1218.96 182.538 1440 32 1440 32" stroke="#B9AA93" stroke-width="3" stroke-dasharray="4 15"/>
+        </svg>
+        <div class="flowers w-24 md:w-40 lg:w-44 h-auto absolute top-0 object-contain z-10"></div>
+    </div>
+</header>
