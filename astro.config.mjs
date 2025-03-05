@@ -7,5 +7,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://andressamfr.github.io',
-  base: 'andressamfr.github.io',
+  base: '/andressamfr.github.io',
 });
