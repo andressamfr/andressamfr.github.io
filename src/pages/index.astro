@@ -1,12 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import About from '../components/sections/About.astro';
-import Experience from '../components/sections/Experience.astro';
-import Skills from '../components/sections/Skills.astro';
+import Layout from "../layouts/Layout.astro";
+import About from "../components/sections/About.astro";
+import Experience from "../components/sections/Experience.astro";
+import Skills from "../components/sections/Skills.astro";
 ---
 
+
 <Layout>
-	<About></About>
-	<Experience></Experience>
-	<Skills></Skills>
+	<div class="scroll-container">
+		<div class="scroll-item">
+			<About></About>
+		</div>
+		<div class="scroll-item">
+			<Experience></Experience>
+		</div>
+		<div class="scroll-item">
+			<Skills></Skills>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.scroll-item {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	}
+
+	.scroll-item.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("visible");
+			}
+			});
+		}, { threshold: 0.2 });
+
+		document.querySelectorAll(".scroll-item").forEach((item) => {
+			observer.observe(item);
+		});
+	});
+
+</script>

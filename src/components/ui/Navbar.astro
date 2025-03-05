@@ -1,0 +1,108 @@
+<div class="flex justify-between items-center font-gotu text-white">
+    <div class="flex items-center gap-x-4 lg:gap-x-8">
+        <span class="w-[32px] h-auto motif hover:opacity-[0.7]"></span>
+        <p class="text-sm md:text-base lg:text-lg mt-[5px]">Andressa M. Fernandes</p>
+    </div>
+    <nav class="hidden md:block">
+        <ul class="flex w-full items-center main-menu mt-[6px] uppercase text-sm lg:text-base">
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li class="md:mr-4 ml-8 leading-0">
+                <a href="https://github.com/andressamfr">
+                    <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="leading-0">
+                <a href="https://www.linkedin.com/in/andressamfr/">
+                    <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="dropdown" class="md:hidden">
+        <button class="relative inline-block cursor-pointer" aria-expanded="true" aria-haspopup="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" aria-hidden="true" data-slot="icon" class="menu-open -mr-1 size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" stroke="white" aria-hidden="true" data-slot="icon" class="menu-close hidden -mr-1 size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div id="dropdown-menu" class="slide-down hidden uppercase text-sm lg:text-base gap-4 absolute right-14 z-10 w-auto min-w-40 origin-top-right rounded-md bg-[#83715f] ring-1 shadow-lg ring-[#83715f]/5 focus:outline-hidden p-4 leading-8"
+        role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <ul class="menu-links border-b border-[#66523f] pb-5" role="none">
+                <li role="menuitem" tabindex="-1" id="menu-item-0"><a href="#about-me">About me</a></li>
+                <li role="menuitem" tabindex="-1" id="menu-item-1"><a href="#experience">Experience</a></li>
+                <li role="menuitem" tabindex="-1" id="menu-item-2"><a href="#skills">Skills</a></li>
+            </ul>
+            <small class="font-poppins normal-case">Get in touch:</small>
+            <ul class="menu-icons pt-2 flex" role="none">
+                <li role="menuitem" tabindex="-1" id="menu-item-3" class="leading-0 mr-3">
+                    <a href="https://github.com/andressamfr">
+                        <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <li role="menuitem" tabindex="-1" id="menu-item-4" class="leading-0">
+                    <a href="https://www.linkedin.com/in/andressamfr/">
+                        <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+    .main-menu li {
+    	line-height: calc(100% + 2px);
+  	}
+
+    .main-menu li:not(:nth-last-child(-n+3))::after {
+       content: '\25CF';
+       font-size: 8px;
+       color: #9C9FB6;
+       margin: 0 10px;
+       vertical-align: middle;
+    }
+
+    .main-menu a:hover {
+        color: #c1ae9c;
+    }
+
+    .menu-links li:hover::before {
+        content: '\203A';
+        padding-right: 5px;
+        color: #e9d8c8;
+    }
+
+    .menu-icons li a:hover {
+        color: #e9d8c8;
+    }
+</style>
+
+<script>
+    document.addEventListener('click', (e) => {
+        const menu = document.getElementById('dropdown-menu');
+        const iconOpen = document.querySelector('.menu-open');
+        const iconClose = document.querySelector('.menu-close');
+
+        if (!menu?.contains(e.target)) {
+            menu?.classList.toggle('hidden');
+            iconOpen?.classList.toggle('hidden');
+            iconClose?.classList.toggle('hidden');
+        }
+    });
+
+</script>

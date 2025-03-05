@@ -1,0 +1,25 @@
+---
+export interface Props {
+    items: {
+        title: string,
+        skills: string[],
+    }[]
+}
+
+const { items } = Astro.props
+---
+
+{items.map((item) => (
+    <div class="border-[#83715f] rounded-2xl border w-64 grow">
+        <h3 class="p-5 bg-[#83715f] rounded-t-[14px] text-center text-white"><strong>{item.title}</strong></h3>
+        <div class="p-10">
+            <ul class="flex flex-wrap gap-4">
+                {item.skills.map((skill) => (
+                    <li class="border border-[#83715f] py-1 px-2 text-[#c1ae9c] hover:text-white hover:bg-[#83715f]">
+                        <p>{skill}</p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+))}

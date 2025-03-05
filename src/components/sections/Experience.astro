@@ -1,6 +1,48 @@
-<div class="bg-[#F9F1E6] relative mt-10 border-t-4 border-[#B9AA93] rounded-t-[155px] border-dotted p-14 md:pr-20 md:pl-20">
+---
+import XPAccordion from "../ui/XPAccordion.astro"
+
+const experienceItems = [
+    { 
+        company: "Grandcentrix, Cologne, Germany", 
+        workPeriod: "January, 2024 - Present", 
+        role: "Apprenticeship in Software Development", 
+        tags: ["Backend", "IoT Solutions"], 
+        description: "As an apprentice, my main goal was to learn and improve my skills. I developed two projects in Kotlin utilising the Ktor framework and htmx library. Those projects also had a simple UI, designed by me. Another project I took part in was a company owned project for energy metering, which had the backend in Kotlin and Spring Boot and frontend with Vue.js. I helped implementing new features from backend to frontend.",
+    },
+
+    { 
+        company: "Germany's Federal Volunteer Service", 
+        workPeriod: "November 2022 - July, 2023", 
+        role: "Volunteer", 
+        tags: ["Social Work", "Children"], 
+        description: "During my time in Germany, I volunteered at a German kindergarten. My tasks included playing with the children, reading for them and helping with the housework. This experience helped me to improve my German and to get a deeper understanding of the German culture.",
+    },
+
+    { 
+        company: "Cultural Exchange, Germany", 
+        workPeriod: "September 2021 - September, 2022", 
+        role: "Au Pair", 
+        tags: ["Children", "Language"], 
+        description: "As an Au Pair, I lived with a German family and I helped them to take care of their children. In exchange, I could learn more about their culture and language.",
+    },
+
+    { 
+        company: "Itaú Unibanco, São Paulo, Brazil", 
+        workPeriod: "September 2019 - August, 2021", 
+        role: "Internship in Software Engineering and Analytics", 
+        tags: ["Finance", "Backend", "Data Science"], 
+        description: "At Itaú, I had my first professional experience. I worked with analytics for billing policies for legal entities. I was mainly responsible for creating performance analysis for their machine learning models, as well as data manipulation and preparation. I also developed a classification tool for bankruptcy prediction. Later, I worked at the cash management department, implementing new backend features in a direct debit application, using Java and Spring Boot.",
+    },
+];
+---
+
+<section id="experience" class="relative mt-10 pt-14 pb-14">
     <h2 class="section-title flex items-center gap-4">
         <span class="qaanoar-leaves-icon w-[42px]"></span>
-        EXPERIENCE
+        Experience
     </h2>
+
+    <div class="flex flex-col">
+        <XPAccordion items={experienceItems}/>
+    </div>
 </div>

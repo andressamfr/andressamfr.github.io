@@ -1,0 +1,88 @@
+---
+export interface Props {
+    items: {
+        company: string, 
+        workPeriod: string, 
+        role: string, 
+        tags: string[], 
+        description: string,
+    }[]
+}
+
+const { items } = Astro.props
+---
+
+{items.map((item) => (
+    <div class="pt-10">
+        <div class="accordion-header group w-full flex flex-wrap sm:flex-nowrap justify-between items-center gap-6 pb-10 border-b-1 border-[#333545] cursor-pointer hover:fir">
+            <div class="flex flex-wrap gap-7 items-center">
+                <div class="flex gap-6">
+                    <button class="accordion-icon group-hover:before:bg-[#484b5f] group-hover:before:transition-all group-hover:before:duration-[0.5s] before:bg-[#62795b] before:justify-center before:flex before:items-center before:text-white before:rounded-full before:leading-[0.4] before:font-[math] before:text-lg before:w-[30px] before:h-[30px]">
+                </button>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-[#93b08a] group-hover:text-white">{item.company}</h3>
+                    <ul><li class="font-semibold list-inside text-xs uppercase">{item.workPeriod}</li></ul>
+                </div>
+                </div>
+                <p>{item.role}</p>
+            </div>
+            <ul class="tags flex flex-wrap lg:flex-nowrap gap-2">
+                {
+                    item.tags.map((tag: String) => (
+                        <li class="group-hover:bg-[#484b5f] text-nowrap group-hover:transition-all group-hover:duration-[0.5s] bg-[#62795b] text-white rounded-full py-2.5 px-3">
+                            <p class="text-xs font-[500]">{tag}</p>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <div class="content overflow-hidden transition-[max-height] duration-[0.5s] ease-out">
+            <p class="py-6 border-b-1 border-[#333545]">{item.description}</p>
+        </div>
+     </div>
+))}
+
+<script>
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    const contentList = document.querySelectorAll('.content');
+
+    accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+            const content = header.nextElementSibling as HTMLElement;
+            const isContentOpen = header.classList.contains('is-open');
+
+            contentList.forEach(item => {
+                const contentItem = item as HTMLElement;
+                const contentHeader = contentItem.previousElementSibling;
+                contentHeader?.classList.remove('is-open');
+                contentItem.style.maxHeight = '0'; 
+            });
+            
+            if (isContentOpen) {
+                content.style.maxHeight = '0';
+                header.classList.remove('is-open');
+            } else {
+                content.style.maxHeight = (content.scrollHeight + 1) + "px";
+                header.classList.add('is-open'); 
+            }
+        });
+    });
+</script>
+
+<style>
+    .accordion-icon::before {
+        content: '\2304';
+    }
+    .is-open .accordion-icon::before {
+        rotate: 180deg;
+    }
+    .is-open .accordion-icon::before, .is-open .tags li {
+        background-color: #484b5f;  
+    }
+    .is-open h3 {
+        color: white;
+    }
+    .content {
+        max-height: 0;
+    }
+</style>

@@ -41,22 +41,37 @@
     font-style: normal;
     src: url("/fonts/Gotu-Regular.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Soria";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/soria-font.ttf") format("truetype");
+  }
   
   @theme {
     --font-poppins: Poppins, sans-serif;
     --font-gotu: Gotu, sans-serif;
     --font-faculty-glyphic: Faculty Glyphic, sans-serif;
+    --font-soria: Soria, serif;
   }
   
   @layer components {
     h2 {
       font-family: var(--font-gotu);
       font-size: var(--text-2xl);
-      color: var(--color-black);
+      color: var(--color-white);
+      text-transform: uppercase;
+    }
+    h4 {
+      font-size: var(--text-sm);
     }
     p {
-      line-height: 1.8;
+      line-height: 2;
       font-size: var(--text-sm);
+    }
+    * {
+      transition: all 0.3s ease-out;
     }
   }
   
@@ -64,6 +79,17 @@
     from {
       opacity: 0;
       transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
     }
     to {
       opacity: 1;
@@ -87,35 +113,23 @@
   .appear {
     animation: appear 1s ease-in;
   }
-  
-  .flowers {
-      content: url("../assets/img/flowers.svg");
+
+  .slide-down {
+    animation: slide-down 0.5s ease-out;
   }
   
   .motif {
-      content: url("../assets/img/motif.svg");
-  }
-  
-  .linkedin-icon {
-      content: url("../assets/img/linkedin_icon.svg");
-  }
-  
-  .github-icon {
-      content: url("../assets/img/github_icon.svg");
+      content: url("../assets/icons/motif_light.svg");
   }
   
   .qaanoar-sun-icon {
-    content: url("../assets/img/qaanoar_sun.svg");
+    content: url("../assets/icons/qaanoar_sun_white.svg");
   }
   
   .qaanoar-leaves-icon {
-    content: url("../assets/img/qaanoar_leaves.svg");
+    content: url("../assets/icons/qaanoar_leaves_white.svg");
   }
   
   .qaanoar-sparkles-icon {
-    content: url("../assets/img/qaanoar_sparkles.svg");
-  }
-  
-  .main-menu li {
-    line-height: calc(100% + 2px);
+    content: url("../assets/icons/qaanoar_sparkles_white.svg");
   }

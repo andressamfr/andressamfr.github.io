@@ -1,0 +1,28 @@
+---
+import SkillsCard from "../ui/SkillsCard.astro"
+
+const skillsItems = [
+    {
+        title: "Backend",
+        skills: ["Kotlin", "Java", "Spring Boot", "Ktor", "Python", "API Documentation", "SQL", "Unit & Integration Testing"],
+    },
+    {
+        title: "Frontend",
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Bootstrap", "WordPress", "Tailwind CSS", "Astro", "Vue.js", "React"],
+    },
+    {
+        title: "Others",
+        skills: ["Figma", "Web Design", "Git", "Github", "Agile/Scrum", "Microsoft Excel", "SAS"],
+    },
+]
+---
+
+<section id="skills" class="border-dots mb-5 relative pt-14 pb-14">
+   <h2 class="section-title flex items-center gap-4">
+        <span class="qaanoar-sparkles-icon w-[42px]"></span>
+        Tech Skills
+    </h2>
+    <div class="flex justify-between gap-6 pt-10 flex-wrap lg:flex-nowrap">
+        <SkillsCard items={skillsItems}/>
+    </div>
+</section>

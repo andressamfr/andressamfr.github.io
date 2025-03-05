@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import ProfilePic from "../../assets/img/profile_pic.jpeg";
+---
+
+<div class="lg:max-h-[400px] p-10 h-full w-full">
+    <div class="flex flex-wrap-reverse lg:flex-row gap-10 lg:gap-10 self-center justify-center items-center">
+        <div class="w-auto z-10 opacity-0 lg:translate-y-5 fade-in text-center">
+            <h1 class="font-soria text-[#93b08a] text-center sm:text-6xl text-5xl">
+                Hello,<br>I"m Andressa
+            </h1>
+            <h3>Software Developer based in Germany</h3>
+        </div>
+
+        <Image src={ProfilePic} alt="Andressa" class="h-44 w-44 md:w-52 md:h-52 xl:w-64 xl:h-64 rounded-full object-cover appear"/>
+    </div>
+</div>
