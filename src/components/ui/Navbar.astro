@@ -1,4 +1,4 @@
-<div class="flex justify-between items-center font-gotu text-white">
+<div class="flex justify-between items-center font-gotu text-white gap-4">
     <div class="flex items-center gap-x-4 lg:gap-x-8">
         <span class="w-[32px] h-auto motif hover:opacity-[0.7]"></span>
         <p class="text-sm md:text-base lg:text-lg mt-[5px]">Andressa M. Fernandes</p>
@@ -26,15 +26,18 @@
     </nav>
 
     <div id="dropdown" class="md:hidden">
-        <button class="relative inline-block cursor-pointer" aria-expanded="true" aria-haspopup="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" aria-hidden="true" data-slot="icon" class="menu-open -mr-1 size-5">
+        <div data-state-open scroll-locked data-aria-hidden="true" aria-hidden="true" class="hidden bg-[#00000080] z-20 fixed right-0 top-0 w-screen h-screen"></div>
+
+        <button class="relative inline-block cursor-pointer z-100" aria-expanded="true" aria-haspopup="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" aria-hidden="true" data-slot="icon" data-state-open class="menu-open -mr-1 size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" stroke="white" aria-hidden="true" data-slot="icon" class="menu-close hidden -mr-1 size-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" stroke="white" aria-hidden="true" data-slot="icon" data-state-open class="menu-close hidden -mr-1 size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
         </button>
-        <div id="dropdown-menu" class="slide-down hidden uppercase text-sm lg:text-base gap-4 absolute right-14 z-10 w-auto min-w-40 origin-top-right rounded-md bg-[#83715f] ring-1 shadow-lg ring-[#83715f]/5 focus:outline-hidden p-4 leading-8"
+
+        <div id="dropdown-menu" data-state-open class="slide-down hidden uppercase text-sm lg:text-base gap-4 absolute right-14 z-100 w-auto min-w-40 origin-top-right rounded-md bg-[#83715f] ring-1 shadow-lg ring-[#83715f]/5 focus:outline-hidden p-4 leading-8"
         role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
             <ul class="menu-links border-b border-[#66523f] pb-5" role="none">
                 <li role="menuitem" tabindex="-1" id="menu-item-0"><a href="#about-me">About me</a></li>
@@ -94,15 +97,24 @@
 
 <script>
     document.addEventListener('click', (e) => {
-        const menu = document.getElementById('dropdown-menu');
-        const iconOpen = document.querySelector('.menu-open');
-        const iconClose = document.querySelector('.menu-close');
+        const dropdown = document.querySelectorAll('[data-state-open]')
+        const dropdownMenu = document.getElementById('dropdown');
 
-        if (!menu?.contains(e.target)) {
-            menu?.classList.toggle('hidden');
-            iconOpen?.classList.toggle('hidden');
-            iconClose?.classList.toggle('hidden');
+        if (dropdownMenu?.contains(e.target)) {
+            dropdown.forEach((element) => {
+                element.classList.toggle('hidden');
+            });
+            dropdownMenu.classList.toggle('is-open');
         }
+
+        const isOpen = dropdownMenu?.classList.contains('is-open');
+
+        if(isOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'scroll'
+        }
+        
     });
 
 </script>
